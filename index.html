@@ -116,7 +116,7 @@ header,.racts,.bcalc-wrap,.err,.card:not(#result),#page-hist,#page-cfg,.hero{dis
 <option value="persiana_horizontal">Persiana Horizontal</option><option value="double_vision">Double Vision</option>
 </select></div>
 <div class="f"><label>Sustenta&ccedil;&atilde;o</label><select id="inst">
-<option value="varao">Var&atilde;o Simples</option><option value="varao_duplo">Var&atilde;o Duplo</option>
+<option value="varao">Var&atilde;o Wave</option><option value="varao_duplo">Var&atilde;o Wave Duplo</option>
 <option value="varao_trad">Var&atilde;o Trad. 28mm Simples</option><option value="varao_trad_duplo">Var&atilde;o Trad. 28mm Duplo</option>
 <option value="varao_trad19">Var&atilde;o Trad. 19mm Simples</option><option value="varao_trad19_duplo">Var&atilde;o Trad. 19mm Duplo</option>
 <option value="trilho">Trilho Su&iacute;&ccedil;o Simples</option><option value="trilho_duplo">Trilho Su&iacute;&ccedil;o Duplo</option>
@@ -143,12 +143,13 @@ header,.racts,.bcalc-wrap,.err,.card:not(#result),#page-hist,#page-cfg,.hero{dis
 <div class="f"><label>Largura (m)</label><input type="number" id="lv" placeholder="ex: 2.50" min="0" step="0.01"></div>
 <div class="f"><label>Altura (m)</label><input type="number" id="av" placeholder="ex: 2.70" min="0" step="0.01"></div>
 <div class="f full"><label class="tog" for="flin"><input type="checkbox" id="flin"><span>For&ccedil;ar corte <strong>linear</strong></span></label></div>
+<div class="f full"><label class="tog" for="falt"><input type="checkbox" id="falt"><span>For&ccedil;ar corte <strong>por altura</strong></span></label></div>
 </div></div></div>
 
 <div class="card"><div class="ch">&#129525; Tecido Principal</div><div class="cb"><div class="g2">
 <div class="f full"><label>Nome</label><input type="text" id="t1n" placeholder="ex: Linho Natural 280cm"></div>
 <div class="f"><label>Propor&ccedil;&atilde;o</label><select id="t1p">
-<option value="1.5">1,5&times;1</option><option value="1.8">1,8&times;1</option><option value="2.0">2,0&times;1</option>
+<option value="1.3">1,3&times;1</option><option value="1.5">1,5&times;1</option><option value="1.8">1,8&times;1</option><option value="2.0">2,0&times;1</option>
 <option value="2.5" selected>2,5&times;1</option><option value="3.0">3,0&times;1</option>
 <option value="1.0">1,0&times;1 &mdash; Forro</option>
 </select></div>
@@ -160,7 +161,7 @@ header,.racts,.bcalc-wrap,.err,.card:not(#result),#page-hist,#page-cfg,.hero{dis
 <div class="card" id="btec2" style="display:none"><div class="ch">&#129525; Tecido 2 &mdash; Forro / Blackout</div><div class="cb"><div class="g2">
 <div class="f full"><label>Nome</label><input type="text" id="t2n" placeholder="ex: Blackout 280cm"></div>
 <div class="f"><label>Propor&ccedil;&atilde;o</label><select id="t2p">
-<option value="1.5">1,5&times;1</option><option value="1.8">1,8&times;1</option><option value="2.0">2,0&times;1</option><option value="2.5">2,5&times;1</option>
+<option value="1.3">1,3&times;1</option><option value="1.5">1,5&times;1</option><option value="1.8">1,8&times;1</option><option value="2.0">2,0&times;1</option><option value="2.5">2,5&times;1</option>
 <option value="3.0">3,0&times;1</option><option value="1.0" selected>1,0&times;1 &mdash; Forro</option>
 </select></div>
 <div class="f"><label>Largura Rolo (m)</label><input type="number" id="t2l" value="2.80" min="0" step="0.01"></div>
@@ -171,7 +172,7 @@ header,.racts,.bcalc-wrap,.err,.card:not(#result),#page-hist,#page-cfg,.hero{dis
 <div class="card" id="btec3" style="display:none"><div class="ch">&#129525; Tecido 3</div><div class="cb"><div class="g2">
 <div class="f full"><label>Nome</label><input type="text" id="t3n" placeholder="ex: Linho Natural 280cm"></div>
 <div class="f"><label>Propor&ccedil;&atilde;o</label><select id="t3p">
-<option value="1.5">1,5&times;1</option><option value="1.8">1,8&times;1</option><option value="2.0">2,0&times;1</option><option value="2.5">2,5&times;1</option>
+<option value="1.3">1,3&times;1</option><option value="1.5">1,5&times;1</option><option value="1.8">1,8&times;1</option><option value="2.0">2,0&times;1</option><option value="2.5">2,5&times;1</option>
 <option value="3.0">3,0&times;1</option><option value="1.0" selected>1,0&times;1 &mdash; Forro</option>
 </select></div>
 <div class="f"><label>Largura Rolo (m)</label><input type="number" id="t3l" value="2.80" min="0" step="0.01"></div>
@@ -246,13 +247,13 @@ header,.racts,.bcalc-wrap,.err,.card:not(#result),#page-hist,#page-cfg,.hero{dis
 <p style="font-size:12px;color:var(--mu);padding:10px 14px 4px;font-style:italic">Itens fixos e adicionais. Adicione novos itens na linha abaixo.</p>
 <div style="overflow-x:auto"><table class="ctbl" id="price-tbl"><thead><tr><th>Item</th><th style="width:75px">Unidade</th><th style="width:110px">Custo (R$)</th><th style="width:110px">Venda (R$)</th><th style="width:30px"></th></tr></thead><tbody id="ptb">
 <tr class="csec" data-cat="Sustentação"><td colspan="5">Sustentação</td></tr>
-<tr><td class="lb">Varão</td><td class="ut">m</td><td><input type="number" id="cvv" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvv" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
-<tr><td class="lb">Varão Duplo</td><td class="ut">m</td><td><input type="number" id="cvvd" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvvd" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
+<tr><td class="lb">Varão Wave</td><td class="ut">m</td><td><input type="number" id="cvv" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvv" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
+<tr><td class="lb">Varão Wave Duplo</td><td class="ut">m</td><td><input type="number" id="cvvd" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvvd" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
 <tr><td class="lb">Trilho Suíço Simples</td><td class="ut">m</td><td><input type="number" id="cvt" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvt" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
 <tr><td class="lb">Trilho Suíço Duplo</td><td class="ut">m</td><td><input type="number" id="cvtd" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvtd" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
 <tr><td class="lb">Trilho Suíço Triplo</td><td class="ut">m</td><td><input type="number" id="cvtt" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvtt" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
-<tr><td class="lb">Suporte</td><td class="ut">un</td><td><input type="number" id="cvs" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvs" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
-<tr><td class="lb">Suporte Duplo</td><td class="ut">un</td><td><input type="number" id="cvsd" step="0.01" min="0" value="15.00"></td><td><input type="number" id="vvsd" step="0.01" min="0" value="25.00"></td><td></td></tr>
+<tr><td class="lb">Suporte Wave</td><td class="ut">un</td><td><input type="number" id="cvs" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvs" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
+<tr><td class="lb">Suporte Wave Duplo</td><td class="ut">un</td><td><input type="number" id="cvsd" step="0.01" min="0" value="15.00"></td><td><input type="number" id="vvsd" step="0.01" min="0" value="25.00"></td><td></td></tr>
 <tr><td class="lb">Ponteira</td><td class="ut">un</td><td><input type="number" id="cvp" step="0.01" min="0" placeholder="0.00"></td><td><input type="number" id="vvp" step="0.01" min="0" placeholder="0.00"></td><td></td></tr>
 <tr class="pe-anc" data-cat="Sustentação"><td colspan="5" style="padding:0;border:none;height:0"></td></tr>
 <tr class="csec" data-cat="Fita e Entretela"><td colspan="5">Fita e Entretela</td></tr>
@@ -390,7 +391,7 @@ function saveDyn(){var d=gS();d.pe_extras=getDyn();sS(d);}
 function loadDyn(){var s=gS();(s.custom_cats||[]).forEach(function(n){addCatSection(n);addOptToNiCat(n);});(s.pe_extras||[]).forEach(function(item){insertDyn(item);});}
 function loadCfg(){var s=gS();NIDS.forEach(function(k){var el=document.getElementById(k);if(!el)return;var v=s[k]!==undefined?s[k]:(DEF[k]||0);el.value=v>0?v:"";});SIDS.forEach(function(k){var el=document.getElementById(k);if(el&&s[k])el.value=s[k];});loadCadInputs();loadDyn();setTimeout(refreshExtrasSel,50);}
 function saveCfg(){var d=gS();NIDS.forEach(function(k){var el=document.getElementById(k);d[k]=el?(parseFloat(el.value)||0):0;});SIDS.forEach(function(k){var el=document.getElementById(k);if(el)d[k]=el.value;});d.pe_extras=getDyn();saveCadInputs();sS(d);var b=document.getElementById("bsv");document.getElementById("svst").textContent="Salvo!";b.classList.add("ok");b.textContent="Salvo!";setTimeout(function(){b.classList.remove("ok");b.textContent="Salvar Configurações";document.getElementById("svst").textContent="";},3000);}
-function getAllPriceItems(){var fixed=[{d:"Varão",u:"m",ck:"cvv",vk:"vvv"},{d:"Trilho Simples",u:"m",ck:"cvt",vk:"vvt"},{d:"Trilho Duplo",u:"m",ck:"cvtd",vk:"vvtd"},{d:"Trilho Triplo",u:"m",ck:"cvtt",vk:"vvtt"},{d:"Suporte",u:"un",ck:"cvs",vk:"vvs"},{d:"Ponteira",u:"un",ck:"cvp",vk:"vvp"},{d:"Fita Wave",u:"m",ck:"cvf",vk:"vvf"},{d:"Entretela EWP",u:"m",ck:"cve",vk:"vve"},{d:"Ilhós",u:"un",ck:"cvi",vk:"vvi"},{d:"Argola",u:"un",ck:"cva",vk:"vva"},{d:"Instalação",u:"serv",ck:"cvi3",vk:"vvi3"},{d:"Mao de Obra",u:"m",ck:"cvm2t1",vk:"vvm2t1"},{d:"Deslocamento",u:"km",ck:"cvkm",vk:"vvkm"}];var items=[];fixed.forEach(function(r){var c=cv(r.ck),v=cv(r.vk);if(v>0||c>0)items.push({desc:r.d,unit:r.u,custo:c,venda:v});});getDyn().forEach(function(e){if(e.desc)items.push(e);});return items;}
+function getAllPriceItems(){var fixed=[{d:"Varão Wave",u:"m",ck:"cvv",vk:"vvv"},{d:"Trilho Simples",u:"m",ck:"cvt",vk:"vvt"},{d:"Trilho Duplo",u:"m",ck:"cvtd",vk:"vvtd"},{d:"Trilho Triplo",u:"m",ck:"cvtt",vk:"vvtt"},{d:"Suporte Wave",u:"un",ck:"cvs",vk:"vvs"},{d:"Ponteira",u:"un",ck:"cvp",vk:"vvp"},{d:"Fita Wave",u:"m",ck:"cvf",vk:"vvf"},{d:"Entretela EWP",u:"m",ck:"cve",vk:"vve"},{d:"Ilhós",u:"un",ck:"cvi",vk:"vvi"},{d:"Argola",u:"un",ck:"cva",vk:"vva"},{d:"Instalação",u:"serv",ck:"cvi3",vk:"vvi3"},{d:"Mao de Obra",u:"m",ck:"cvm2t1",vk:"vvm2t1"},{d:"Deslocamento",u:"km",ck:"cvkm",vk:"vvkm"}];var items=[];fixed.forEach(function(r){var c=cv(r.ck),v=cv(r.vk);if(v>0||c>0)items.push({desc:r.d,unit:r.u,custo:c,venda:v});});getDyn().forEach(function(e){if(e.desc)items.push(e);});return items;}
 function refreshExtrasSel(){var sel=document.getElementById("extrasel");if(!sel)return;sel.innerHTML="<option value=''>-- selecione um item --</option>";getAllPriceItems().forEach(function(item,i){var opt=document.createElement("option");opt.value=i;opt.textContent=item.desc+(item.unit?" ("+item.unit+")":"");sel.appendChild(opt);});}
 function addExtraFromSel(){var sel=document.getElementById("extrasel");if(!sel)return;var idx=parseInt(sel.value);if(isNaN(idx))return;var items=getAllPriceItems();var item=items[idx];if(!item)return;document.getElementById("extras-list").appendChild(mkExtraRow(item));sel.value="";}
 function addExtraFree(){document.getElementById("extras-list").appendChild(mkExtraRow(null));}
@@ -422,12 +423,12 @@ function fmt(n,d){d=d==null?2:d;return n.toLocaleString("pt-BR",{minimumFraction
 function fR(n){return "R$ "+fmt(n);}
 function c05(n){return Math.ceil(n/0.5)*0.5;}
 function fitaN(p){var m={"2.0":"Fita Wave 2x1","2.5":"Fita Wave 2,5x1","3.0":"Fita Wave 3x1","3.5":"Fita Wave 3,5x1","4.0":"Fita Wave 4x1"};return m[String(p)]||"-";}
-function PL(ps){var m={"1.5":"1,5x1","1.8":"1,8x1","2.0":"2,0x1","2.5":"2,5x1","3.0":"3,0x1","1.0":"1,0x1"};return m[ps]||ps;}
+function PL(ps){var m={"1.3":"1,3x1","1.5":"1,5x1","1.8":"1,8x1","2.0":"2,0x1","2.5":"2,5x1","3.0":"3,0x1","1.0":"1,0x1"};return m[ps]||ps;}
 function pad(s,n){s=String(s);while(s.length<n)s=" "+s;return s;}
 function padL(s,n){s=String(s);while(s.length<n)s=s+" ";return s;}
 function rep(c,n){var s="";for(var i=0;i<n;i++)s+=c;return s;}
 function isBlk100(nome){var n=nome.toLowerCase();return n.indexOf("blackout 100")>=0||n.indexOf("blackout100")>=0;}
-function calcTec(nome,lv,av,prop,lrolo,acB,acL,flin){var realAcB=isBlk100(nome)?0.05:acB;var ac=av+realAcB,lf=lv*prop,lfC=lf+acL;if(flin||(ac<=lrolo-0.20))return{m:lfC,nP:1,tp:"linear",ac:ac,lf:lf,lfC:lfC,acB:realAcB};var nP=Math.ceil(lfC/lrolo);return{m:nP*ac,nP:nP,tp:"por altura",ac:ac,lf:lf,lfC:lfC,acB:realAcB};}
+function calcTec(nome,lv,av,prop,lrolo,acB,acL,flin,falt){var realAcB=isBlk100(nome)?0.07:acB;var ac=av+realAcB,lf=lv*prop,lfC=lf+acL;if(falt){var nP=Math.ceil(lfC/lrolo);return{m:nP*ac,nP:nP,tp:"por altura",ac:ac,lf:lf,lfC:lfC,acB:realAcB};}if(flin||(ac<=lrolo-0.20))return{m:lfC,nP:1,tp:"linear",ac:ac,lf:lf,lfC:lfC,acB:realAcB};var nP=Math.ceil(lfC/lrolo);return{m:nP*ac,nP:nP,tp:"por altura",ac:ac,lf:lf,lfC:lfC,acB:realAcB};}
 function maoC(av,ntec,lv){var k=av<=2?(ntec>1?"cvm2t2":"cvm2t1"):av<=4?(ntec>1?"cvm4t2":"cvm4t1"):(ntec>1?"cvm5t2":"cvm5t1");return cv(k)*lv;}
 function maoV(av,ntec,lv){var k=av<=2?(ntec>1?"vvm2t2":"vvm2t1"):av<=4?(ntec>1?"vvm4t2":"vvm4t1"):(ntec>1?"vvm5t2":"vvm5t1");return cv(k)*lv;}
 function maoR(av,ntec){var k=av<=2?(ntec>1?"cvm2t2":"cvm2t1"):av<=4?(ntec>1?"cvm4t2":"cvm4t1"):(ntec>1?"cvm5t2":"cvm5t1");return cv(k);}
@@ -447,6 +448,7 @@ function calc(){
   var lv=parseFloat(document.getElementById("lv").value);
   var av=parseFloat(document.getElementById("av").value);
   var flin=document.getElementById("flin").checked;
+  var falt=document.getElementById("falt").checked;
   var t1n=document.getElementById("t1n").value.trim();
   var t1ps=document.getElementById("t1p").value;var t1p=parseFloat(t1ps);
   var t1l=parseFloat(document.getElementById("t1l").value)||2.80;
@@ -481,38 +483,56 @@ function calc(){
   var t1,t2,t3;
   if(isModeloArgola){
     var lf1=lv*t1p;var ac1=av+0.50;
-    if(flin||(ac1<=t1l-0.20)){t1={m:lf1,nP:1,tp:"linear",ac:ac1,lf:lf1,lfC:lf1,acB:0.50};}
+    if(!falt&&(flin||(ac1<=t1l-0.20))){t1={m:lf1,nP:1,tp:"linear",ac:ac1,lf:lf1,lfC:lf1,acB:0.50};}
     else{var nP1=Math.ceil(lf1/t1l);t1={m:nP1*ac1,nP:nP1,tp:"por altura",ac:ac1,lf:lf1,lfC:lf1,acB:0.50};}
     if(dois&&t2n){var lf2=lv*t2p;var ac2=av+0.50;
-      if(flin||(ac2<=t2l-0.20)){t2={m:lf2,nP:1,tp:"linear",ac:ac2,lf:lf2,lfC:lf2,acB:0.50};}
+      if(!falt&&(flin||(ac2<=t2l-0.20))){t2={m:lf2,nP:1,tp:"linear",ac:ac2,lf:lf2,lfC:lf2,acB:0.50};}
       else{var nP2=Math.ceil(lf2/t2l);t2={m:nP2*ac2,nP:nP2,tp:"por altura",ac:ac2,lf:lf2,lfC:lf2,acB:0.50};}
     }else{t2=null;}
     if(tres&&t3n){var lf3=lv*t3p;var ac3=av+0.50;
-      if(flin||(ac3<=t3l-0.20)){t3={m:lf3,nP:1,tp:"linear",ac:ac3,lf:lf3,lfC:lf3,acB:0.50};}
+      if(!falt&&(flin||(ac3<=t3l-0.20))){t3={m:lf3,nP:1,tp:"linear",ac:ac3,lf:lf3,lfC:lf3,acB:0.50};}
       else{var nP3=Math.ceil(lf3/t3l);t3={m:nP3*ac3,nP:nP3,tp:"por altura",ac:ac3,lf:lf3,lfC:lf3,acB:0.50};}
     }else{t3=null;}
   }else{
-    var acBjun=0.50,acBsep=0.70,acL=0.40;
+    var acBjun=0.50,acBsep=0.70;
     var acB1=cost==="jun"?acBjun:acBsep;
     var acB1_eff=acB1;var acB2_eff=acB1;
+    /* Wave 2 tecidos: barra especial */
     if(mod==="wave"&&dois){
       if(cost==="jun"){acB1_eff=0.40;acB2_eff=0.50;}
       else{acB1_eff=0.50;acB2_eff=0.50;}
     }
-    t1=calcTec(t1n,lv,av,t1p,t1l,acB1_eff,acL,flin);
-    t2=(dois&&t2n)?calcTec(t2n,lv,av,t2p,t2l,acB2_eff,acL,flin):null;
-    t3=(tres&&t3n)?calcTec(t3n,lv,av,t3p,t3l,0.70,acL,flin):null;
+    /* acL (aumento largura +0.40): só Wave. Blackout recebe com 1 tec ou 2 juntos. */
+    var acL1=0,acL2=0,acL3=0;
+    if(mod==="wave"){
+      if(!dois){
+        /* 1 tecido: +0.40 sempre */
+        acL1=0.40;
+      }else if(cost==="jun"){
+        /* junto: +0.40 nos dois, inclusive blackout */
+        acL1=0.40;
+        acL2=(dois&&t2n)?0.40:0;
+      }else{
+        /* separado: +0.40 só no tec1 sempre, tec2 (blackout) não recebe */
+        acL1=0.40;
+        acL2=0;
+      }
+      acL3=0;
+    }
+    t1=calcTec(t1n,lv,av,t1p,t1l,acB1_eff,acL1,flin,falt);
+    t2=(dois&&t2n)?calcTec(t2n,lv,av,t2p,t2l,acB2_eff,acL2,flin,falt):null;
+    t3=(tres&&t3n)?calcTec(t3n,lv,av,t3p,t3l,0.70,acL3,flin,falt):null;
   }
 
-  var mF1=uF?t1.lf:0,mF2=(uF&&t2&&cost==="sep")?t2.lf:0,mF3=(uF&&t3)?t3.lf:0;
-  var mE1=uE?t1.lfC:0,mE2=(uE&&t2&&cost==="sep")?t2.lfC:0,mE3=(uE&&t3)?t3.lfC:0;
+  var mF1=uF?t1.lf:0,mF2=0,mF3=(uF&&t3)?t3.lf:0;
+  var mE1=uE?t1.lfC:0,mE2=0,mE3=(uE&&t3)?t3.lfC:0;
   var totF=mF1+mF2+mF3,totE=mE1+mE2+mE3;
 
   var corVarao="",corIlhos="",usaPont=false;
   var cVT=0,vVT=0,cST=0,vST=0,cPT=0,vPT=0;
   var cIK=0,vIK=0,qI=0,cIT=0,vIT=0;
   var mS=c05(lv);var qSup=0,qPont=0;var medVarao="28";
-  var sN=inst==="varao"?"Varão Simples":inst==="varao_duplo"?"Varão Duplo":inst==="varao_trad"?"Varão Trad. 28mm":inst==="varao_trad_duplo"?"Varão Trad. 28mm Duplo":inst==="varao_trad19"?"Varão Trad. 19mm":inst==="varao_trad19_duplo"?"Varão Trad. 19mm Duplo":inst==="trilho_duplo"?"Trilho Suíço Duplo":inst==="trilho_triplo"?"Trilho Suíço Triplo":"Trilho Suíço";
+  var sN=inst==="varao"?"Varão Wave":inst==="varao_duplo"?"Varão Wave Duplo":inst==="varao_trad"?"Varão Trad. 28mm":inst==="varao_trad_duplo"?"Varão Trad. 28mm Duplo":inst==="varao_trad19"?"Varão Trad. 19mm":inst==="varao_trad19_duplo"?"Varão Trad. 19mm Duplo":inst==="trilho_duplo"?"Trilho Suíço Duplo":inst==="trilho_triplo"?"Trilho Suíço Triplo":"Trilho Suíço";
 
   if(isModeloIlhos&&isVarao){
     corVarao=document.getElementById("corVarao").value;
@@ -607,19 +627,19 @@ function calc(){
   t+="\n-- TECIDO 1: "+t1n+" --\n";
   if(isModeloArgola){t+="Proporcao: "+PL(t1ps)+"  Largura total: "+fmt(t1.lf)+" m\n";
     t+="Barra+Cabeca: +0,50 m  Alt.corte: "+fmt(t1.ac)+" m  Corte: "+t1.tp+(t1.tp==="por altura"?" ("+t1.nP+" partes)":"")+"\n";
-  }else{t+="Proporcao: "+PL(t1ps)+"  Franzida: "+fmt(t1.lf)+" m  (+0,40: "+fmt(t1.lfC)+" m)\n";
+  }else{var _acL1=t1.lfC-t1.lf;t+="Proporcao: "+PL(t1ps)+"  Franzida: "+fmt(t1.lf)+" m"+(_acL1>0?"  (+"+fmt(_acL1)+": "+fmt(t1.lfC)+" m)":"")+"\n";
     t+="Barra: +"+fmt(t1.acB)+" m  Alt.corte: "+fmt(t1.ac)+" m  Corte: "+t1.tp+(t1.tp==="por altura"?" ("+t1.nP+" partes)":"")+"\n";}
   t+="Metros: "+fmt(t1.m)+" m\n";
   if(t2&&t2n){t+="\n-- TECIDO 2: "+t2n+" --\n";
     if(isModeloArgola){t+="Proporcao: "+PL(t2ps)+"  Largura total: "+fmt(t2.lf)+" m\n";
       t+="Barra+Cabeca: +0,50 m  Alt.corte: "+fmt(t2.ac)+" m  Corte: "+t2.tp+(t2.tp==="por altura"?" ("+t2.nP+" partes)":"")+"\n";
-    }else{t+="Proporcao: "+PL(t2ps)+"  Franzida: "+fmt(t2.lf)+" m  (+0,40: "+fmt(t2.lfC)+" m)\n";
+    }else{var _acL2=t2.lfC-t2.lf;t+="Proporcao: "+PL(t2ps)+"  Franzida: "+fmt(t2.lf)+" m"+(_acL2>0?"  (+"+fmt(_acL2)+": "+fmt(t2.lfC)+" m)":"")+"\n";
       t+="Barra: +"+fmt(t2.acB)+" m  Alt.corte: "+fmt(t2.ac)+" m  Corte: "+t2.tp+(t2.tp==="por altura"?" ("+t2.nP+" partes)":"")+"\n";}
     t+="Metros: "+fmt(t2.m)+" m\n";}
   if(t3&&t3n){t+="\n-- TECIDO 3 (sep.): "+t3n+" --\n";
     if(isModeloArgola){t+="Proporcao: "+PL(t3ps)+"  Largura total: "+fmt(t3.lf)+" m\n";
       t+="Barra+Cabeca: +0,50 m  Alt.corte: "+fmt(t3.ac)+" m  Corte: "+t3.tp+(t3.tp==="por altura"?" ("+t3.nP+" partes)":"")+"\n";
-    }else{t+="Proporcao: "+PL(t3ps)+"  Franzida: "+fmt(t3.lf)+" m  (+0,40: "+fmt(t3.lfC)+" m)\n";
+    }else{var _acL3=t3.lfC-t3.lf;t+="Proporcao: "+PL(t3ps)+"  Franzida: "+fmt(t3.lf)+" m"+(_acL3>0?"  (+"+fmt(_acL3)+": "+fmt(t3.lfC)+" m)":"")+"\n";
       t+="Barra: +"+fmt(t3.acB)+" m  Alt.corte: "+fmt(t3.ac)+" m  Corte: "+t3.tp+(t3.tp==="por altura"?" ("+t3.nP+" partes)":"")+"\n";}
     t+="Metros: "+fmt(t3.m)+" m\n";}
   if(uF)t+="\nFita Wave: "+fitaN(t1p)+" - "+fmt(totF)+" m"+(t2&&cost==="jun"?" (juntos)":"")+"\n";
@@ -640,8 +660,8 @@ function calc(){
   if(t3&&t3n)its.push(["Tecido 3 - "+t3n+" (sep.)",fmt(t3.m)+" m",cT3,vT3]);
   if(isVarao){var varD=sN;if(isModeloCorVarao&&corVarao)varD+=" "+(CORN[corVarao]||"")+(isModeloArgola?" "+medTxt:"");
     its.push([varD,fmt(mS)+" m"+(isModeloCorVarao&&dois&&cost==="sep"?" x2":""),cVT,vVT]);
-    var sMT=isModeloArgola?medTxt:"28mm";
-    var sNm=inst==="varao_duplo"?"Sup. Duplo "+sMT:"Sup. "+sMT;
+    var sMT=isModeloArgola?medTxt:(isVaraoTrad?(isVaraoTrad19?"19mm":"28mm"):"Wave");
+    var sNm=isVaraoDuplo?"Sup. "+sMT+" Duplo":"Sup. "+sMT;
     if(isModeloCorVarao&&corVarao)sNm+=" "+(CORN[corVarao]||"");
     its.push([sNm,qSup+" un",cST,vST]);
     if(usaPont){var pD="Pont. "+sMT;if(isModeloCorVarao&&corVarao)pD+=" "+(CORN[corVarao]||"");its.push([pD,qPont+" un",cPT,vPT]);}
@@ -660,6 +680,28 @@ function calc(){
   its.forEach(function(i){t+=padL(i[0],mxL+2)+pad(fR(i[2]),col)+"   "+pad(fR(i[3]),col)+"\n";});
   t+=rep("-",mxL+2+col*2+5)+"\n";
   t+=padL("TOTAL",mxL+2)+pad(fR(totC),col)+"   "+pad(fR(totV),col)+"\n\n";
+  /* === ESPECIFICAÇÕES PARA COMANDA === */
+  var qtdBotoes=Math.round(lv/0.05)+4;
+  var configTec=!dois?"1 tecido":(cost==="jun"?"junto":"separado");
+  t+=rep("=",46)+"\n";
+  t+="  ESPECIFICACOES PARA COMANDA\n";
+  t+=rep("=",46)+"\n";
+  t+="Tecido 1: "+t1n+"\n";
+  t+="  Metragem: "+fmt(t1.m)+" m\n";
+  t+="  Corte: "+t1.tp+(t1.tp==="por altura"?" ("+t1.nP+" partes)":"")+"\n";
+  if(t2&&t2n){
+    t+="Tecido 2: "+t2n+"\n";
+    t+="  Metragem: "+fmt(t2.m)+" m\n";
+    t+="  Corte: "+t2.tp+(t2.tp==="por altura"?" ("+t2.nP+" partes)":"")+"\n";
+  }
+  if(t3&&t3n){
+    t+="Tecido 3: "+t3n+"\n";
+    t+="  Metragem: "+fmt(t3.m)+" m\n";
+    t+="  Corte: "+t3.tp+(t3.tp==="por altura"?" ("+t3.nP+" partes)":"")+"\n";
+  }
+  t+="Configuracao: "+configTec+"\n";
+  t+="Botoes: "+qtdBotoes+" un\n";
+  t+=rep("=",46)+"\n\n";
   t+=rep("=",46)+"\n  VALOR FINAL: "+fR(totV)+"\n"+rep("=",46)+"\n";
   t+="  Lucro: "+fR(lucro)+"\n\nMarillar Cortinas - "+hoje+"\n";
   showResult(t,totV);
@@ -735,7 +777,7 @@ function buildPrint(o,simples){
     i2.push({d:"Tecido 1 - "+o.t1n,dt:fmt(o.t1.m)+" m, "+PL(o.t1ps),c:o.cT1,v:o.vT1});
     if(o.t2&&o.t2n)i2.push({d:"Tecido 2 - "+o.t2n,dt:fmt(o.t2.m)+" m, "+PL(o.t2ps),c:o.cT2,v:o.vT2});
     if(o.t3&&o.t3n)i2.push({d:"Tecido 3 - "+o.t3n+" (sep.)",dt:fmt(o.t3.m)+" m, "+PL(o.t3ps),c:o.cT3,v:o.vT3});
-    if(o.isVarao){i2.push({d:o.sN+(o.isModeloCorVarao&&o.corVarao?" "+({tabaco:"Tabaco",branco:"Branco",marfim:"Marfim",palha:"Palha",cromado:"Cromado",aco_escovado:"Aço Escovado"}[o.corVarao]||"")+(o.isModeloArgola?" "+(o.medVarao||"28")+"mm":""):""),dt:fmt(o.mS)+" m"+(o.isModeloCorVarao&&o.dois&&o.cost==="sep"?" x2":""),c:o.cVT,v:o.vVT});var _mt=o.isModeloArgola?(o.medVarao||"28")+"mm":"28mm";i2.push({d:(o.inst==="varao_duplo"?"Sup. Duplo ":"Sup. ")+_mt,dt:o.qSup+" un",c:o.cST,v:o.vST});if(o.usaPont&&o.qPont)i2.push({d:"Pont. "+_mt,dt:o.qPont+" un",c:o.cPT,v:o.vPT});}
+    if(o.isVarao){i2.push({d:o.sN+(o.isModeloCorVarao&&o.corVarao?" "+({tabaco:"Tabaco",branco:"Branco",marfim:"Marfim",palha:"Palha",cromado:"Cromado",aco_escovado:"Aço Escovado"}[o.corVarao]||"")+(o.isModeloArgola?" "+(o.medVarao||"28")+"mm":""):""),dt:fmt(o.mS)+" m"+(o.isModeloCorVarao&&o.dois&&o.cost==="sep"?" x2":""),c:o.cVT,v:o.vVT});var _isVT=o.inst==="varao_trad"||o.inst==="varao_trad_duplo"||o.inst==="varao_trad19"||o.inst==="varao_trad19_duplo";var _isVT19=o.inst==="varao_trad19"||o.inst==="varao_trad19_duplo";var _isVD=o.inst==="varao_duplo"||o.inst==="varao_trad_duplo"||o.inst==="varao_trad19_duplo";var _mt=o.isModeloArgola?(o.medVarao||"28")+"mm":(_isVT?(_isVT19?"19mm":"28mm"):"Wave");i2.push({d:(_isVD?"Sup. "+_mt+" Duplo":"Sup. "+_mt),dt:o.qSup+" un",c:o.cST,v:o.vST});if(o.usaPont&&o.qPont)i2.push({d:"Pont. "+_mt,dt:o.qPont+" un",c:o.cPT,v:o.vPT});}
     else i2.push({d:o.sN,dt:fmt(o.mS)+" m",c:o.cVT,v:o.vVT});
     if(o.uI)i2.push({d:o.mn,dt:o.qI+" un",c:o.cIT,v:o.vIT});
     if(o.uF)i2.push({d:"Fita Wave "+fmt(o.totF)+" m",dt:"",c:o.cFT,v:o.vFT});
